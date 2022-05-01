@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+/*
+Joãozinho investiu Q reais em
+uma aplicação com rendimento fixo de R% ao
+mês. Pede-se a implementação de um
+programa que calcule o valor (e exiba-o)
+disponível na conta de Joãozinho após A anos
+de investimento.
+*/
+
+void main ()
+{
+	float nReais, valorTotal, r;
+	int tempoInv, i, meses;
+	
+	printf ("Digite o valor do seu investimento:\n");
+	scanf ("%f", &nReais);
+	
+	printf ("Digite o tempo de investimento:\n");
+	scanf ("%d", &tempoInv);
+	
+	printf ("Escreva o rendimento:\n");
+	scanf ("%f", &r);
+	
+	meses = tempoInv * 12;
+	
+	for (i = 1; i <= meses; i++)
+	{
+		nReais = nReais + (r / 100)* nReais;
+	}
+	
+	printf ("Rendimento mensal: %.2f", nReais);
+	
+}

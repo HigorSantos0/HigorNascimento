@@ -1,0 +1,49 @@
+/*Questão 04:
+Na matemática, dois números são chamados de
+primos entre si quando o seu único divisor em
+comum é a unidade (ou seja, o número 1).
+Considerando este conceito, implementar um
+programa que, dados dois números inteiros,
+determine se são ou não primos entre si.
+*/
+
+#include <stdio.h>
+#define QUANT 2
+void main ()
+{
+	int i, num1, num2, primos, resto = 0, restob = 0;
+	
+	
+	printf ("Entre com o primeiro numero:\n");
+	scanf ("%d", &num1);
+	
+	printf ("Entre com o primeiro numero:\n");
+	scanf ("%d", &num2);
+	
+	for (i = 1; i <= num1; i++)
+	{
+		if (num1 % i == 0)
+		{
+			resto++;
+		}
+		
+	}
+	for (i = 1; i <= num2; i++)
+	{
+		if (num2 % i == 0)
+		{
+			restob++;
+		}
+	}
+	
+	
+	if (resto && restob == 2)
+	{
+		printf ("Esses numeros sao primos entre si!\n");
+	}
+	else
+		{
+			printf ("Esses numeros nao sao primos entre si!\n");
+		}
+	
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define CONT 5
+/*QUESTÃO 03: Implementar um programa
+que calcule o valor de base e expoente, onde
+base e expoente são números inteiros
+dados pelo usuário.
+*/
+
+void main()
+{
+	int i, base, expoente, valor = 1;
+	
+	printf ("Entre com o valor da base:\n");
+	scanf ("%d", &base);
+	
+	printf ("Entre com o valor do expoente:\n");
+	scanf ("%d", &expoente);
+	
+	for (i = 1; i <= expoente; i++)
+	{
+		valor = valor * base;
+		printf ("%d ", valor);
+	}
+	
+	printf ("O resulta e' = %d\n", valor);
+
+}

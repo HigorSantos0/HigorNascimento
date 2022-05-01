@@ -1,0 +1,46 @@
+#include <stdio.h>
+#define CONT 5
+#include <limits.h>
+/*QUESTÃO 05: QUESTÃO 06: Faça um programa que leia
+200 números inteiros. Ao final, exibir:
+a) O maior número fornecido, de
+ordem par (isto é, o maior dentre o
+segundo, quarto, sexto, oitavo, etc
+valores fornecidos).
+b) A média dos valores pares.
+*/
+
+void main()
+{
+	int i, maior = INT_MIN, menor = INT_MAX, valorpar = 0, num, somapares = 0;
+	float media;
+	
+	
+	for (i = 1; i <= CONT; i++)
+	{
+		
+		printf ("Entre com os valores:\n");
+		scanf ("%d", &num);
+		
+		if (i % 2 == 0)
+		{
+			
+			if (num > maior)
+			{
+				maior = num;
+			}
+		
+		}
+		if (num % 2 == 0)
+		{
+			somapares = somapares + num;
+			valorpar++;
+		}
+	}
+	
+	media = (float)somapares / valorpar;
+	
+	printf ("O maior numero fornecido de ordem par: %d\n", maior);
+	printf ("A media dos valores pares: %.2f\n", media);
+	
+}

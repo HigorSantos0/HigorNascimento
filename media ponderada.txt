@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define CONT 2
+/*QUESTÃO 05: Elabore um programa que
+calcule a média ponderada de n elementos.
+Observação: na média ponderada, cada
+elemento possui um peso que representa a
+sua contribuição no cálculo da média final.
+*/
+
+void main()
+{
+	int i, n; 
+	float totalmedia, n1, n2, valordiv = 0, valormult = 0, valorsoma = 0, mult = 0;
+	
+	printf ("Entre com o n valores:\n");
+	scanf ("%d", &n);
+	
+	for (i = 1; i <= n; i++)
+	{
+		
+		valormult = 0;
+		
+		printf ("Entre com o primeiro valor:\n");
+		scanf ("%f", &n1);
+		
+		printf ("Entre com o segundo valor:\n");
+		scanf ("%f", &n2);
+			
+		valormult = n1 * n2;
+		mult = mult + valormult;
+		valorsoma += n2;
+	}
+		
+		
+	
+	
+	totalmedia = (float)mult / valorsoma;
+	printf ("A media ponderada: %.2f\n", totalmedia);
+	
+}

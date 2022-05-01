@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void main ()
+{
+	/*: Faça um programa que leia um
+número inteiro positivo N e exiba todos os
+múltiplos de Y inferiores a N, onde N e Y são
+fornecidos pelo usuário.
+*/
+	int i, n, y;
+	
+	printf ("Entre com o num:\n");
+	scanf ("%d", &n);
+	
+	printf ("Entre com o numero para saber os multiplos:\n");
+	scanf ("%d", &y);
+	
+	
+	for (i = 1; i <= n; i++)
+	{
+		if (i % y == 0)
+		{
+			printf ("%d ", i);
+		}
+	}
+	
+}

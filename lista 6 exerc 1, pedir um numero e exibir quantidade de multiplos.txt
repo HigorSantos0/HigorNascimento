@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define CONT 5
+/*Faça um programa que leia
+um número inteiro x e, em seguida, solicite
+ao usuário outros 50 valores inteiros. Ao
+final, o programa deve exibir o total de
+múltiplos de x fornecidos.
+*/
+
+void main()
+{
+	int i = 1, num, valor, total = 0;
+	
+	printf ("Entre com um numero para que encontre os multiplos:\n");
+	scanf ("%d", &num);
+	
+	while(i <= CONT)
+	{
+		printf ("\nEntre com os valores:\n");
+		scanf ("%d", &valor);
+		
+		i++;
+		if (valor % num == 0)
+		{
+			
+			total++;
+			
+		}
+		
+		
+	}
+	printf ("\n\nQuantidade de multiplos = %d\n", total);
+}

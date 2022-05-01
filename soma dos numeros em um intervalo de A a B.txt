@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+/*
+Calcular a soma dos numeros em um intervalo de A a B.
+*/
+
+int somanum (int num1, int num2)
+
+{
+int i, somanumeros = 0;
+
+for (i = num1;i <= num2;i++)
+{
+somanumeros = somanumeros + i;
+}
+
+return somanumeros;
+}
+void main ()
+{
+int numero1, numero2, resp;
+
+printf ("Digite o primeiro numero:\n");
+scanf ("%d", &numero1);
+
+printf ("Digite o segundo numero:\n");
+scanf ("%d", &numero2);
+
+resp = somanum (numero1, numero2);
+printf ("%d ", resp);
+
+}
+
+
+
+/*
+Exibir os numeros pares no intervalo de A a B.
+*/

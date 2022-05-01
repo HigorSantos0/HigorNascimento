@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void main ()
+{
+	/*
+	Desenvolver um programa no qual o
+	usuário entre com vários números inteiros
+	e positivos e imprima o produto dos
+	números ímpares e a soma dos números
+	pares. 
+	*/
+    int N, somaP=0, produto;
+    
+    
+    do 
+    {
+    	printf ("Entre com o numero desejado, caso queira sair digite -1:\n");
+    	scanf ("%d", &N);
+    	
+    	if (N > 0)
+    	{
+    		if (N % 2 == 0)
+    		{
+    			somaP += N;
+			}
+			else
+				{
+					produto = produto * N;
+				}	
+		}
+    	
+		
+			
+	}while(N > 0);	
+    
+    
+    
+    
+    printf("\nSoma dos numeros pares: %d\n", somaP);
+    
+    printf("\nProduto dos numeros impares: %d\n", produto);
+    
+}

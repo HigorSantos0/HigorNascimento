@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main ()
+{
+	/*
+	Dado um número inteiro N, fazer um
+	programa que exiba os números pares
+	iguais ou inferiores a N. 
+	*/
+	
+	int i, num;
+	
+	printf("Entre com um numero:\n");
+	scanf ("%d", &num);
+	
+	for (i = 1; i <= num; i++)
+	{
+		if (i % 2 == 0)
+		{
+			printf ("%d ", i);
+		}
+	}
+}

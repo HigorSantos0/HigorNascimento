@@ -1,0 +1,82 @@
+/*Foi feita uma pesquisa entre os habitantes
+de uma região e coletados os dados de
+altura e gênero das pessoas. Faça um
+programa que leia as informações de 50
+pessoas e informe:
+- a maior e a menor alturas
+encontradas;
+- a média de altura das mulheres;
+- a média de altura da população;
+- o percentual de homens na
+população.
+*/
+
+
+#include <stdio.h>
+#define QUANT 4
+
+void main ()
+{
+	float altura, mediaAltura, media, mediaPopulacao, mediaP, percentual, menorAltura = 1000, maiorAltura = 0;
+	int i = 1, contM = 0, populacao = 0, contMas = 0;
+	char genero;
+	
+	
+	while(i <= QUANT)
+	{
+		
+		printf ("Entre com o seu genero:\n");
+		fflush(stdin);
+		scanf ("%c", &genero);
+		
+		printf ("Entre com sua altura:\n");
+		scanf ("%f", &altura);
+		
+		genero = toupper(genero);
+		
+		if (altura > maiorAltura)
+		{
+			maiorAltura = altura;
+		}
+		if (altura < menorAltura)
+		{
+			menorAltura = altura;
+		}
+					
+
+			
+			if (genero == 'F')
+			{
+				contM++;
+				mediaAltura += altura;
+				
+			}
+			else
+				{
+					contMas++;
+					
+				}
+				
+				if (altura > 0)
+					{
+						populacao++;
+						mediaPopulacao += altura;
+					}
+				i++;
+		
+			
+	}
+	media = (float)mediaAltura / contM;
+	mediaP = (float)mediaPopulacao / populacao;
+	percentual = ((float)contMas / populacao) * 100;
+	
+	
+	printf ("Maior altura: %.2f\n", maiorAltura);
+	printf ("Menor altura: %.2f\n", menorAltura);
+	printf ("Media da altura das mulheres: %.2f\n", media);
+	printf ("Media de altura da populacao: %.2f\n", mediaP);
+	printf ("Percentual de homens na populacao: %.2f %%\n", percentual);
+	
+	
+	
+}

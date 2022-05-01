@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+/*QUESTÃO 03:
+Construir um programa que permita ao usuário
+calcular a área de uma figura geométrica. Para
+isto, o usuário deverá escolher a figura desejada
+([C]írculo, [R]etângulo, [Q]uadrado ou
+[T]riângulo) e fornecer as informações
+necessárias para que a área desta figura possa
+ser calculada.
+Notas:
+1. Fórmulas para o cálculo das áreas:
+a. círculo = p.raio2, onde p = 3.14159;
+b. retângulo = base.altura;
+c. quadrado = lado2;
+d. triângulo = (base.altura)/2.
+2. Caso o usuário escolha uma opção inválida,
+uma mensagem de erro deve ser exibida e a
+execução do programa terminada.
+*/
+
+void main ()
+{
+	float circulo, triangulo, quadrado, retangulo, raio;
+	float base, altura;
+	float lado;
+	int num;
+        
+    printf ("Digite 1 para saber o calculo do Circulo\n");
+    printf ("Digite 2 para saber o calculo do Retangulo\n");
+    printf ("Digite 3 para saber o calculo do Quadrado\n");
+    printf ("Digite 4 para saber o calculo do Triangulo\n");
+    scanf ("%d", &num);
+    
+    switch (num)
+    {
+    	case 1:
+    		printf ("Digite o valor do Raio:\n");
+    		scanf ("%f", &raio);
+    		circulo = 3.14 * (raio * raio);
+    		printf ("Valor do circulo: %.2f\n", circulo);
+    		break;
+    		
+    	case 2:
+    		printf ("Digite o valor da base:\n");
+    		scanf ("%f", &base);
+    		printf ("Digite o valor da altura:\n");
+    		scanf ("%f", &altura);
+    		retangulo = base * altura;
+    		printf ("Valor do retangulo: %.2f\n", retangulo);
+    		break;
+    		
+    	case 3:
+    		printf ("Digite o valor do lado:\n");
+    		scanf ("%f", &lado);
+    		quadrado = lado * lado;
+    		printf ("Valor do lado: %.2f\n", quadrado);
+    		break;
+    		
+    	case 4:
+    		printf ("Entre com o valor da base:\n");
+    		scanf ("%f", &base);
+    		printf ("Entre com o valor da altura:\n");
+    		scanf ("%f", &altura);
+    		triangulo = (base * altura) / 2;
+    		printf ("valor do triangulo: %.2f\n", triangulo);
+    		break;
+    		
+    	default:
+    		printf ("Erro! Numero digitado invalido.");
+	}     
+	
+}

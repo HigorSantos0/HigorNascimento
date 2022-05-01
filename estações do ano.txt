@@ -1,0 +1,134 @@
+#include <stdio.h>
+
+void main()
+{
+	int dia, mes;
+	
+	printf("Entre com o dia: ");
+	scanf("%d", &dia);
+	
+	printf("entre com o mes: ");
+	scanf("%d", &mes);
+	
+	
+	if (mes == 1)
+	{
+		printf("Verão");
+	}
+	  else
+	  {
+		if(mes == 2)
+		{
+			printf("Verão");
+			
+		}
+		else
+		{
+			if(mes==3)
+			{
+				if(dia<20)
+				{
+					printf("Verao");
+				}
+				else
+				{
+					printf("outono");
+				}
+			}
+			else
+			{
+				if(mes==4)
+				{
+					printf("Outono");
+				}
+				else
+				{
+					if(mes==5)
+					{
+						printf("Outono");
+					}
+					else
+					{
+						if(mes==6)
+						{
+							if(dia<21)
+							{
+								printf("outono");
+							}
+							else
+							{
+								printf("Inverno");
+							}
+						}
+						
+						else
+						{
+							if (mes==7)
+							{
+								printf("inverno");
+							}
+							else
+							{
+								if(mes==8)
+								{
+									printf("Inverno");
+								}
+								
+								else
+								{
+									if(mes==9)
+									{
+										if(dia<23)
+										{
+											printf("Inverno");
+										}
+										else
+										{
+											printf("Primavera");
+										}
+										
+									}
+									if(mes==10)
+									{
+										printf("primavera");
+									}
+									else
+									{
+										if(mes==11)
+										{
+											printf("Primavera");
+										}
+										else
+										{
+											if(mes==12)
+											{
+												if (dia<21)
+												{
+													printf("primavera");
+												}
+												else
+												{
+													printf("Verao");
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						
+						
+					}
+				}
+			}
+			
+			
+			
+			
+		}
+		
+		
+		
+	  }
+	
+	

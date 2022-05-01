@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void main ()
+{
+int i, num, number2;
+
+printf ("Escolha um numero:\n");
+scanf ("%d", &num);
+
+printf ("Escolha o segundo numero:\n");
+scanf ("%d", &number2);
+
+if (num < number2)
+{
+for (i = num;i <= number2;i++)
+{
+if (i % 2 == 0)
+{
+printf ("%d ", i);
+}
+}
+}
+else
+{
+for (i = number2; i <= num;i++)
+{
+if (i % 2 == 0)
+{
+printf ("%d ", i);
+}
+}
+}
+
+
+}
+
+/*
+Exibir os numeros pares no intervalo de A a B.
+*/

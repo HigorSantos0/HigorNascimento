@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+/*
+Faça um programa que leia um
+número N inteiro, menor ou igual a 18. Se for
+maior do que 18, o programa exibirá uma
+mensagem de erro e terminará a sua
+execução; caso contrário, deverá exibir os
+números no intervalo de 1 a 99 cujos
+algarismos somem N.
+Exemplo:
+N = 12 Portanto, o programa deve exibir
+os números que estão no
+intervalo de 1 a 99, cujos
+algarismos somam 12. Ou seja:
+39, 48, 57, 66, 75, 84 e 93.
+*/
+
+void main()
+{
+	
+	int num, alg1, alg2, soma, i;
+	
+	printf ("Entre com um numero de 1 a 18:\n");
+	scanf ("%d", &num);
+	
+	if ((num < 1) || (num > 18))
+	{
+		printf ("Valor invalido!");
+	}
+	else
+		{
+			for (i = 1; i <= 99; i++)
+			{
+				alg1 = i / 10;
+				alg2 = i % 10;
+				
+				if (alg1 + alg2 == num)
+				{
+					printf ("%d ", i);
+				}
+				
+			}
+		}
+	
+}

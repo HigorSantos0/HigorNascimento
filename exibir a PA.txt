@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void main()
+{
+	/*
+	Implementar um programa que exiba os N
+	primeiros termos de uma PA (Progressão
+	Aritmética) com primeiro termo a1 e razão
+	r. 
+	*/
+	
+	int ntermos, i;
+	float r, primeirotermo, termo;
+	
+	printf ("Digite o numero de termos da PA: ");
+	scanf ("%d", &ntermos);
+	
+	printf ("Entre com a razao:\n");
+	scanf ("%f", &r);
+	
+	printf ("Quem sera o primeiro elemento: ");
+	scanf ("%f", &primeirotermo);
+	
+	termo = primeirotermo;
+	
+	for (i = 1; i <= ntermos; i++)
+	{
+		printf ("%.1f ", termo);
+		termo = termo + r;
+	}
+	
+	
+	
+	
+}

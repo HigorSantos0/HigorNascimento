@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+
+void main ()
+{
+	/*QUESTÃO 07: Uma determinada empresa fez
+uma pesquisa de mercado para saber se as
+pessoas gostaram ou não de um novo
+produto que foi lançado. Para cada pessoa
+entrevistada foram coletados os seguintes
+dados: gênero (M ou F) e resposta (G
+[Gostou] ou N [Não Gostou]). Sabendo-se
+que foram entrevistadas X pessoas, faça um
+programa que forneça:
+a) Número de pessoas que gostaram do
+produto;
+b) Número de pessoas que não
+gostaram do produto;
+c) Informação dizendo em que gênero
+o produto teve uma melhor
+aceitação.
+*/
+	int i,
+		xPessoas,
+		contOpM = 0,
+		contOpF = 0,
+		contM = 0,
+		contF = 0,
+		contadorG,
+		contadorNG;
+		
+	char genero, opiniao;
+	float percM, percF;
+	
+	printf ("Entre com o numero de pessoas entrevistadas:\n");
+	scanf ("%d", &xPessoas);
+	
+	for (i = 1; i <= xPessoas; i++)
+	{
+		printf ("Entre com o seu genero:\n");
+		fflush(stdin);
+		scanf ("%c", &genero);
+		
+		printf ("Digite G se gostou e N se nao gostou:\n");
+		fflush(stdin);
+		scanf ("%c", &opiniao);
+		
+		if (toupper (genero) == 'M')
+		{
+			contM++;
+		
+			if (toupper (opiniao) == 'G')
+			{
+				contOpM++;
+			}
+	}
+	else
+		{
+			contF++;
+			
+			if (toupper (opiniao) == 'G')
+			{
+				contOpF++;
+			}
+		}
+		
+		
+	}
+	
+	contadorG = contOpM + contOpF;
+	contadorNG = xPessoas - contadorG;
+	
+	
+		
+	printf ("Numero de pessoas que gostaram: %d\n", contadorG);
+	printf ("NUmero de pessoas que nao gostaram %d\n", contadorNG);
+	
+	percM = ((float)contOpM/contM) * 100;		
+	percF = ((float)contOpF/contF) * 100;		
+	
+	if (percF > percM)
+	{
+		printf ("\nHouve maior aceitacao entre as mulheres (%.2f %%).", percF);
+	}
+	else
+	{
+		if (percM > percF)
+		{
+			printf ("\nHouve maior aceitacao entre os homens (%.2f %%).", percM);
+		}
+		else
+		{
+			printf ("\nHouve a mesma aceitacao entre homens e mulheres (%.2f %%).", percF);
+		}
+	}
+	
+}

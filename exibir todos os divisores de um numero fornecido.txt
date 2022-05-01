@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main ()
+{
+	/*
+	Fazer um programa que exiba todos os
+	divisores de um número fornecido pelo
+	usuário. 
+	*/
+	int i, num;
+	
+	printf ("Entre com o numero que deseja saber o divisores: ");
+	scanf ("%d", &num);
+	
+	for (i = 1; i <= num; i++)
+	{
+		if (num % i == 0)
+		{
+			printf ("%d ", i);
+		}
+	}
+	
+}

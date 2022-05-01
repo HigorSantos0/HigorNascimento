@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main ()
+{
+	/*
+	Criar um programa que exiba os N
+	primeiros termos da seguinte série:
+	1,2,4,8,16,32,...
+	*/
+	int i, num, nn, termo;
+	
+	printf ("entre com um numero: ");
+	scanf ("%d", &num);
+	
+	termo = 1;
+	
+	for (i = 1; i <= num; i++)
+	{
+		printf ("%d ", termo);
+		termo = termo * 2;
+		
+	}
+}	

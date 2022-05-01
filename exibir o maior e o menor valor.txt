@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <limits.h>
+
+/*Pede-se o desenvolvimento
+de um programa que leia n valores e
+determine o maior e o menor elementos
+do conjunto fornecido.
+*/
+
+void main()
+{
+	int i = 1, x, valor, maior = INT_MIN, menor = INT_MAX;
+	
+	printf ("Entre com o numero de elementos:\n");
+	scanf ("%d", &x);
+	
+	while(i <= x)
+	{
+		printf ("Entre com o valores:\n");
+		scanf ("%d", &valor);
+		
+		if (valor > maior)
+		{
+			maior = valor;
+		}
+		
+		if (valor < menor)
+		{
+			menor = valor;
+		}
+		i++;
+	}
+	
+	printf ("O maior valor: %d\n", maior);
+	printf ("O menor valor: %d\n", menor);
+
+}

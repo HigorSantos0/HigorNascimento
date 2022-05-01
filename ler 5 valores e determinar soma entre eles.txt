@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define QUANT 5
+
+int lervalores (int val)
+{
+int i, somavalores = 0;
+
+for (i = 1; i <= QUANT;i++)
+{
+printf ("Digite 5 valores:\n");
+scanf ("%d", &val);
+
+somavalores = somavalores + val;
+
+}
+
+return somavalores;
+
+
+}
+void main ()
+{
+int resposta, valor;
+
+resposta = lervalores (valor);
+printf ("%d ", resposta);
+}

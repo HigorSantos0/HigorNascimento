@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+void main ()
+{
+	char nome;
+	int apT, diaria, consumo, apartamento, valTotal, taxaServico, subTotal, valorTotaldiarias;	
+	
+	printf ("entre com o seu nome:\n");
+	scanf ("%c", &nome);
+	fflush(stdin);
+	
+	printf ("\nEscolha 1 para apartamento A\n");
+	printf ("\nEscolha 2 para apartamento B\n");
+	printf ("\nEscolha 3 para apartamento C\n");
+	printf ("\nEscolha 4 para apartamento D\n");
+	
+	printf ("Escolha :\n");
+	scanf ("%d", &apT);
+	fflush(stdin);
+	
+	switch (apT)
+	{
+		case 1:
+				apartamento = apartamento + 350.00;
+			break;
+		case 2: 
+				apartamento = apartamento + 275.00;
+			break;
+		case 3: 
+				apartamento = apartamento + 200.00;
+			break;
+		case 4:
+				apartamento = apartamento + 150.00;
+			break;
+			
+			default: 
+				printf ("Erro! Valor digitado invalido!");
+			
+	}
+	printf ("Digite a quantidade de diarias:\n");
+	scanf ("%d", &diaria);
+	
+	printf ("Digite o valor consumido no local:\n");
+	scanf ("%d", &consumo);
+	
+	valorTotaldiarias = apartamento * diaria;
+	subTotal = valorTotaldiarias + consumo;
+	taxaServico = subTotal * 0.10;
+	valTotal = subTotal + taxaServico;
+	
+	printf ("\nNome do Hospede: %c\n", nome);
+	printf ("\nTipo de apartamento: %d\n", apT);
+	printf ("\nValor total das diarias: %d\n", valorTotaldiarias);
+	printf ("\nValor do consumo: %d\n", consumo);
+	printf ("\nsubtotal: %d\n", subTotal);
+	printf ("\nValor da taxa de servico: %d\n", taxaServico);
+	printf ("\nValor total: %d\n", valTotal);
+	
+	
+
+	
+	
+	/*Faça um algoritmo para calcular a conta final de
+um hóspede de um hotel, considerando que:
+a) Devem ser obtidos o nome do hóspede, o
+tipo do apartamento utilizado (A, B, C ou D),
+o número de diárias utilizadas pelo hóspede
+e o valor do consumo interno do hóspede;
+b) O valor da diária é determinado pela
+seguinte tabela:
+Tipo de Apartamento Valor da diária
+A R$ 350,00
+B R$ 275,00
+C R$ 200,00
+D R$ 150,00
+c) O valor da taxa de serviço equivale a
+10% da conta.
+A conta a ser apresentada ao cliente deve
+conter: o nome do hóspede, o tipo do
+apartamento, o valor total das diárias, o
+valor do consumo interno, o subtotal, o
+valor da taxa de serviço e o total geral.
+*/
+
+}
