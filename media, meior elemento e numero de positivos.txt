@@ -1,0 +1,52 @@
+/*Implementar um programa que leia 50 valores
+reais. Ao final, exibir:
+1. A média de todos os elementos
+fornecidos;
+2. O maior dentre os primeiros 25 valores
+informados pelo usuário;
+3. A quantidade de positivos do 26o ao
+último elemento..*/
+
+#include <stdio.h>
+#include <limits.h>
+#define CONT 10
+
+void main ()
+{
+    int quantpositivos = 0;
+    float valor, i = 1, media, somaelementos = 0, maiorvalor = INT_MIN;
+
+    while (i <= CONT)
+    {
+        printf ("Entre com os valores reias:\n");
+        scanf ("%f", &valor);
+
+        somaelementos += valor;
+
+        
+        if (i <= 25)
+        {
+            if (valor > maiorvalor)
+            {
+                maiorvalor = valor;
+            }
+        }
+        
+        if (valor > 0)
+        {
+            if (i >= 26)
+            {
+                quantpositivos++;
+            }
+        }
+     i++;   
+    }
+
+    media = somaelementos / CONT;
+
+    printf ("A media de todos os elementos fornecidos = %.2f\n", media);
+    printf ("O maior dentre os primeiros 25 valores informados pelo usuario = %.2f\n", maiorvalor);
+    printf ("A quantidade de positivos do 26o ao ultimo elemento = %d", quantpositivos);
+    
+}
+ 
