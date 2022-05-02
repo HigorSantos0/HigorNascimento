@@ -1,0 +1,35 @@
+/*QUESTÃO 02: Um fazendeiro realizou um
+tratamento sobre sua plantação de café
+que gerou um crescimento constante de C
+% em sua produção, por ano.
+Considerando que atualmente sua
+produção anual seja de M u.p.,
+implementar um programa que determine
+a quantidade de anos necessária para que
+a produção duplique.*/
+
+#include <stdio.h>
+
+void main ()
+{
+    int i = 0;
+    float m, c, valor;
+
+    printf ("Entre com o valor da producao anual:\n");
+    scanf ("%f", &m);
+
+    printf ("Entre com o valor da taxa para o crescimento:\n");
+    scanf ("%f", &c);
+
+    valor = m;
+
+    while (valor <= m*2)
+    {
+        valor = valor + (c/100) * valor;
+        i++;
+    }
+    printf ("Sera necessario %d anos para gerar crescimento de %.2f -> %.2f\n", i, m, valor);
+    
+    
+}
+ 
