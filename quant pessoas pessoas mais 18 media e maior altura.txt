@@ -1,0 +1,67 @@
+/*Desenvolver um programa que permaneça
+lendo dados (idade, peso e altura) de algumas
+pessoas até que a idade fornecida seja igual a -1
+(ou seja, assim que a idade -1 for fornecida, mais
+nenhuma informação deverá ser solicitada). Ao
+final, exibir:
+1. A quantidade de pessoas que
+forneceram seus dados;
+2. O número de pessoas com 18 anos ou
+mais;
+3. A média de altura daqueles com mais de
+65 anos;
+4. A maior altura das pessoas que possuem
+80 kg ou mais.*/
+
+#include <stdio.h>
+
+void main()
+{
+    int idade, pessoas = 0, pessoasmais18 = 0, idademais65 = 0;
+    float peso, altura, alturamais65 = 0, maioraltura, media;
+
+    do
+    {
+        printf ("Entre com seu peso:\n");
+        scanf ("%f", &peso);
+
+        printf ("Entre com sua altura:\n");
+        scanf ("%f", &altura);
+
+        if (idade != -1)
+        {
+            printf ("Entre com sua idade:\n");
+            scanf ("%d", &idade);
+
+            pessoas++;
+
+            if (idade > 18)
+            {
+                pessoasmais18++;
+            }
+            if (idade > 65)
+            {
+                alturamais65 += altura;
+                idademais65++;
+            }
+            if (peso >= 80)
+            {
+                if (altura > maioraltura)
+                {
+                    maioraltura = altura;
+                }
+            }
+
+
+        }
+        
+    } while (idade != -1);
+
+    media = (float)alturamais65/idademais65;
+
+    printf ("A quantidade de pessoas que forneceram seus dados = %d\n", pessoas);
+    printf ("O numero de pessoas com 18 anos ou mais = %d\n", pessoasmais18);
+    printf ("A media de altura daqueles com mais de 65 anos = %.2f\n", media);
+    printf ("A maior altura das pessoas que possuem 80 kg ou mais: %.2f\n", maioraltura);
+    
+}
